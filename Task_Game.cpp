@@ -35,6 +35,20 @@ namespace Game
 		int animCnt;
 	};
 
+	struct Enemy
+	{
+		State state;
+		float x, y;
+		float vx, vy;
+		Angle angle;
+		Box2D hitBase;
+		Box2D drawBase;
+		Box2D src;
+		int animCnt;
+		float enemyWalkSpeedRecord;
+		int enemyAttackTime, enemyDeadTime, enemyChoose;
+	};
+
 	struct Player 
 	{
 		float x, y;
@@ -58,20 +72,6 @@ namespace Game
 		Box2D src;
 		int animCnt;
 		bool isDropping;
-	};
-
-	struct Enemy
-	{
-		State state;
-		float x, y;
-		float vx, vy;
-		Angle angle;
-		Box2D hitBase;
-		Box2D drawBase;
-		Box2D src;
-		int animCnt;
-		float enemyWalkSpeedRecord;
-		int enemyAttackTime, enemyDeadTime, enemyChoose;
 	};
 
 	struct castleData
